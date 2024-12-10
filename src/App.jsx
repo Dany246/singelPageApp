@@ -2,8 +2,9 @@ import { BrowserRouter, NavLink, Routes, Route } from "react-router-dom";
 import { InstrumentListPage } from "./components/InstrumentListPage";
 import { InstrumentSinglePage } from "./components/InstrumentSinglePage";
 // import { InstrumentListPage } from "./InstrumentListPage";
-// import { InstrumentSinglePage } from "./InstrumentSinglePage";
-// import { InstrumentCreatePage } from "./InstrumentCreatePage";
+
+import  InstrumentCreatePage  from "./components/InstrumentCreatePage";
+import InstrumentUpdate from "./components/InstrumentUpdate";
 function App() {
   
   return (
@@ -29,7 +30,9 @@ function App() {
         {/* <Route path="/" element="Hangszer listaoldal" /> */}
         <Route path="/" element={<InstrumentListPage />} />
         { <Route path="/hangszer/:hangszerId" element={<InstrumentSinglePage />} />}
-        {/* {<Route path="/uj-hangszer" element={<InstrumentCreatePage />} />} */}
+        {<Route path="/uj-hangszer" element={<InstrumentCreatePage />} />}
+        <Route path="/modosit/:hangszerId" element={<InstrumentUpdate/>} />
+      
       </Routes>
     </BrowserRouter>
       

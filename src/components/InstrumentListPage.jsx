@@ -43,6 +43,7 @@ export function InstrumentListPage() {
                         : "https://via.placeholder.com/400x800"
                     }
                   />
+                  
                 </div>
               </div>
             </NavLink>
